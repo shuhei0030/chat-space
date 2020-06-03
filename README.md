@@ -3,7 +3,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|username|string|null: false|
+|name|string|null: false|
 |email|string|null: false|
 |password|string|null: false|
 
@@ -15,7 +15,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group-name|string|null: false, unique: true|
+|name|string|null: false, unique: true|
 
 ### Association
 - has_many :messages
@@ -36,7 +36,7 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
+|body|text||
 |image|string||
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
