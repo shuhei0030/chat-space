@@ -1,0 +1,26 @@
+-# <サイドバー>
+.Side-bar
+  .Side-bar__user-name
+    .Top-items
+      .Top-items__name
+        user
+      %ul.Top-items__icons
+        %li
+          = link_to "#" do
+            = icon('far', 'edit', class:"icon")
+        %li
+          = link_to "#" do
+            = icon('fas', 'cog', class:"icon")
+  .Side-bar__group-list
+    .Chat-group
+      = link_to "#", class:'Chat-group__a' do
+        .Chat-group__name
+          gurop名
+        .Chat-group__message
+          まだメッセージがありません
+    .Chat-group
+      = link_to "#", class:'Chat-group__a' do
+        .Chat-group__name
+          gurop名
+        .Chat-group__message
+          まだメッセージがありません
