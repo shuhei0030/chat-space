@@ -1,0 +1,41 @@
+-# <チャット画面>
+.Chat-main
+  .Chat-main__group-info
+    .Info
+      .Info__name
+        test
+      %ul.Info__member-list
+        Member：
+        %li.Info__member-list--member
+          name
+    = link_to "#" ,class:'Info-edit' do
+      Edit
+
+  .Chat-main__message-list
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__name
+          name
+        .MessageInfo__date
+          day_time
+      .Message
+        %p.Message__text
+          おはよう
+    .MessageBox
+      .MessageInfo
+        .MessageInfo__name
+          name
+        .MessageInfo__date
+          day_time
+      .Message
+        %p.Message__text
+          おはよう
+
+  .Chat-main__message-form
+    = form_with url: "#", class: "Form", local: true do |f|
+      .Form-input
+        = f.text_field :text ,class:'Form-input__text', placeholder: 'type a message'
+        = f.label :image, class:'Form-input__image' do
+          = icon('far', 'image', class:"Form-input__image--icon")
+          = f.file_field :image, class: 'Form-input__image--file'
+      = f.submit 'Send', class: 'Send-btn'
