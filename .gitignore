@@ -31,4 +31,4 @@ yarn-debug.log*
 .yarn-integrity
 
 public/uoloads/*
-/.DS_Store
+.DS_Store
